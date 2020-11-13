@@ -1,0 +1,100 @@
+Prova talon
+Aluno : André Venâncio Ribeiro Leite de Carvalho
+RA: 020120002
+ADS 1T
+
+Ex1)Faça um programa, que receba duas notas, e exiba a média aritimética do aluno:
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float p1, p2, MA;
+    cout << "Digite a P1: ";
+    cin >> p1;
+    cout << "digite a P2: ";
+    cin >> p2;
+
+    MA = (p1+ p2) / 2 ;
+
+    cout << "Media aritimetica do aluno = "<< MA;
+    return 0;
+}
+
+
+
+2) Uma empresa vai determinar o bonus de natal para cada funcionário com base no salário deles, se for entre R$ 1~2000, ele ganhará 25% de bonus, entre R$ 2001~5000 15%, acima de 5000 será 7%. Faça um programa que receba o salário do funcionário e apresente seu bônus de natal:
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float salario, bonus;
+
+    cout << "Digite salario do funcionario (R$): ";
+    cin >> salario;
+    while (salario <0 ) {
+        cout << "Digite um salario positivo ";
+        cin >> salario;
+    }
+    if (salario <= 2000){
+        bonus = salario * 0.25;
+        cout << "Bonus de natal = "<< bonus<<" reais";
+    } else {if (salario <= 5000){
+        bonus = salario * 0.15;
+        cout << "Bonus de natal = "<< bonus<<" reais";
+        } else {
+        bonus = salario * 0.07;
+        cout << "Bonus de natal = "<< bonus<<" reais";
+        }
+    }
+
+
+    return 0;
+}
+
+
+3)Faça um programa que leia 2 números (primeiro número tem que ser maior que o segundo) e faça a soma de todos os números entre eles, excluso ambos os números:
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n1, n2, soma, aux;
+
+    cout << "Digite 2 numeros :";
+    cin >> n1;
+    cin >> n2;
+
+    while (n1>n2){
+        cout << "Primeiro numero deve ser maior que o segundo"<<endl;
+        cout << "Digite 2 numeros :";
+        cin >> n1;
+        cin >> n2;
+    }
+    aux = n1+1;
+    while (aux == n2){
+        cout << "Nao existe nenhum numero inteiro entre eles"<<endl;
+        cout << "Digite 2 numeros :";
+        cin >> n1;
+        cin >> n2;
+    }
+    soma =0;
+    for (aux; aux<n2; aux++){
+        soma = aux + soma;
+    }
+    cout << "A soma de todos os numeros inteiros entre "<<n1<<" e "<<n2<<" eh igual a :"<< soma;
+    return 0;
+}
+
+
+
+4) De todo o conteúdo ministrado, quanto você acha que foi o seu aproveitamento em uma escala de 0 a 10?
+Nota 10.
